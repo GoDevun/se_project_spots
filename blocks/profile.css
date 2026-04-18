@@ -74,6 +74,7 @@
   align-items: center;
   justify-content: center;
   align-self: flex-end;
+  margin-left: auto;
   gap: 8px;
   min-width: 149px;
   height: 52px;

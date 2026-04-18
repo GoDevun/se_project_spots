@@ -19,6 +19,6 @@
   }
 
   .cards__list {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, 288px);
   }
 }

@@ -1,7 +1,6 @@
 .card {
   border-radius: 8px;
   overflow: hidden;
-  background-color: #fff;
 }
 
 .card__image {
@@ -17,7 +16,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 14px 17px;
 }
 
 .card__title {

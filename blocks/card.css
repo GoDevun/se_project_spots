@@ -1,28 +1,16 @@
-.cards {
-  padding-top: 36px;
-  padding-bottom: 72px;
-}
-
-.cards__list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
 .card {
-  border-radius: 16px;
+  border-radius: 8px;
   overflow: hidden;
   background-color: #fff;
 }
 
 .card__image {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  height: 413px;
   object-fit: cover;
   display: block;
+  border-radius: 8px;
+  margin-bottom: 12px;
 }
 
 .card__caption {
@@ -33,14 +21,14 @@
 }
 
 .card__title {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.43;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
   margin: 0;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  max-width: calc(100% - 40px);
+  max-width: 353px;
 }
 
 .card__like-btn {
@@ -51,25 +39,20 @@
   display: flex;
   align-items: center;
   flex-shrink: 0;
+  opacity: 0.4;
   transition: opacity 0.3s;
 }
 
 .card__like-btn:hover {
-  opacity: 0.6;
-}
-
-@media (max-width: 1320px) {
-  .cards__list {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  opacity: 1;
 }
 
 @media (max-width: 630px) {
-  .cards {
-    padding-bottom: 40px;
+  .card__image {
+    height: 288px;
   }
 
-  .cards__list {
-    grid-template-columns: 1fr;
+  .card__title {
+    max-width: 235px;
   }
 }

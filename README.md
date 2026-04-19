@@ -35,4 +35,4 @@ Spots is a responsive image-sharing web application where users can browse a gal
 
 ## Project Pitch Video
 
-[Watch the project pitch video](ADD_LINK_HERE)
+[Watch the project pitch video](https://www.loom.com/share/30ab278210114d91918352bc303e40f4)

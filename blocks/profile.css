@@ -104,6 +104,7 @@
   }
 
   .profile__avatar {
+    margin: 0 0 12px;
     width: 80px;
     height: 80px;
   }

@@ -55,5 +55,6 @@ newPostCloseBtn.addEventListener("click", function () {
 newPostFormEl.addEventListener("submit", function (evt) {
   evt.preventDefault();
   console.log(newPostImageInput.value, newPostCaptionInput.value);
+  newPostFormEl.requestFullscreen();
   closeModal(newPostModal);
 });

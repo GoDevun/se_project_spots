@@ -83,6 +83,7 @@
   border: 1px solid #2121214d;
   font-size: 16px;
   box-sizing: border-box;
+  padding: 16px 12px 16px;
 }
 
 .modal__input:hover {
@@ -121,7 +122,7 @@
   opacity: 0.8;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 627px) {
   .modal__container {
     padding: 22px 12px 12px;
   }

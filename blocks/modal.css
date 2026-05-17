@@ -23,7 +23,7 @@
 }
 
 .modal__container {
-  max-width: 730px;
+  max-width: 100%;
   width: 100%;
   border-radius: 8px;
   background-color: #ffff;
@@ -44,6 +44,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.modal__close-btn:hover {
+  opacity: 0.8;
+  background-color: #f0f0f0;
+  transform: scale(1.1);
 }
 
 .modal__close-btn img {
@@ -78,6 +84,7 @@
   border-radius: 8px;
   border: 1px solid #2121214d;
   font-size: 16px;
+  box-sizing: border-box;
 }
 
 .modal__input::placeholder {
@@ -105,4 +112,10 @@
   cursor: pointer;
   flex-shrink: 0;
   transition: opacity 0.3s;
+}
+
+.modal__submit-btn:hover {
+  opacity: 0.8;
+  background-color: #2121214d;
+  transform: scale(1.05);
 }

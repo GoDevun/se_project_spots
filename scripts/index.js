@@ -1,3 +1,35 @@
+const initialCards = [
+  {
+    name: "Val Thorens",
+    link: "../images/1-photo-by-moritz-feldmann-from-pexels.jpg",
+  },
+
+  {
+    name: "Restaurant terrace",
+    link: "../images/2-photo-by-ceiline-from-pexels.jpg",
+  },
+
+  {
+    name: "An outdoor cafe",
+    link: "../images/3-photo-by-tubanur-dogan-from-pexels.jpg",
+  },
+
+  {
+    name: "A very long bridge, over the sea and somewhere",
+    link: "../images/4-photo-by-maurice-laschet-from-pexels.jpg",
+  },
+
+  {
+    name: "Tunnel with morning light",
+    link: "../images/5-photo-by-van-anh-nguyen-from-pexels.jpg",
+  },
+
+  {
+    name: "Mountain house",
+    link: "../images/6-photo-by-moritz-feldmann-from-pexels.jpg",
+  },
+];
+
 const editProfileBtn = document.querySelector(".profile__edit-btn");
 const editProfileModal = document.querySelector("#edit-profile-modal");
 const editProfileCloseBtn = editProfileModal.querySelector(".modal__close-btn");
@@ -57,4 +89,9 @@ newPostFormEl.addEventListener("submit", function (evt) {
   console.log(newPostImageInput.value, newPostCaptionInput.value);
   newPostFormEl.requestFullscreen();
   closeModal(newPostModal);
+});
+
+initialCards.forEach(function (item) {
+  console.log(item.name);
+  console.log(item.link);
 });

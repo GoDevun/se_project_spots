@@ -51,6 +51,19 @@ const newPostCaptionInput = newPostModal.querySelector(
   "#new-post-caption-input",
 );
 
+const cardTemplate = document.querySelector("#card-template");
+const cardsList = document.querySelector(".cards__list");
+
+function getCardElement(data) {
+  const cardElement = cardTemplate.content.cloneNode(true);
+  const cardImageEl = cardElement.querySelector(".card__image");
+  const cardNameEl = cardElement.querySelector(".card__title");
+  cardImageEl.src = data.link;
+  cardImageEl.alt = data.name;
+  cardNameEl.textContent = data.name;
+  return cardElement;
+}
+
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
 }
@@ -86,12 +99,17 @@ newPostCloseBtn.addEventListener("click", function () {
 
 newPostFormEl.addEventListener("submit", function (evt) {
   evt.preventDefault();
-  console.log(newPostImageInput.value, newPostCaptionInput.value);
-  newPostFormEl.requestFullscreen();
+  const newCard = {
+    name: newPostCaptionInput.value,
+    link: newPostImageInput.value,
+  };
+  const card = getCardElement(newCard);
+  cardsList.prepend(card);
+
   closeModal(newPostModal);
 });
 
 initialCards.forEach(function (item) {
-  console.log(item.name);
-  console.log(item.link);
+  const card = getCardElement(item);
+  cardsList.prepend(card);
 });

@@ -1,32 +1,32 @@
 const initialCards = [
   {
     name: "Val Thorens",
-    link: "../images/1-photo-by-moritz-feldmann-from-pexels.jpg",
+    link: "./images/1-photo-by-moritz-feldmann-from-pexels.jpg",
   },
 
   {
     name: "Restaurant terrace",
-    link: "../images/2-photo-by-ceiline-from-pexels.jpg",
+    link: "./images/2-photo-by-ceiline-from-pexels.jpg",
   },
 
   {
     name: "An outdoor cafe",
-    link: "../images/3-photo-by-tubanur-dogan-from-pexels.jpg",
+    link: "./images/3-photo-by-tubanur-dogan-from-pexels.jpg",
   },
 
   {
     name: "A very long bridge, over the sea and somewhere",
-    link: "../images/4-photo-by-maurice-laschet-from-pexels.jpg",
+    link: "./images/4-photo-by-maurice-laschet-from-pexels.jpg",
   },
 
   {
     name: "Tunnel with morning light",
-    link: "../images/5-photo-by-van-anh-nguyen-from-pexels.jpg",
+    link: "./images/5-photo-by-van-anh-nguyen-from-pexels.jpg",
   },
 
   {
     name: "Mountain house",
-    link: "../images/6-photo-by-moritz-feldmann-from-pexels.jpg",
+    link: "./images/6-photo-by-moritz-feldmann-from-pexels.jpg",
   },
 
   {
@@ -73,9 +73,22 @@ function getCardElement(data) {
   cardImageEl.alt = data.name;
   cardNameEl.textContent = data.name;
 
+  const cardEl = cardElement.querySelector(".card");
+  const cardDeleteBtnEl = cardElement.querySelector(".card__delete-btn");
   const cardLikeBtnEl = cardElement.querySelector(".card__like-btn");
+  const cardLikeIconEl = cardLikeBtnEl.querySelector(".card__like-icon");
+
+  cardDeleteBtnEl.addEventListener("click", () => {
+    cardEl.remove();
+  });
+
   cardLikeBtnEl.addEventListener("click", () => {
-    cardLikeBtnEl.classList.toggle("card__like-btn-active");
+    cardLikeBtnEl.classList.toggle("card__like-btn_active");
+    if (cardLikeBtnEl.classList.contains("card__like-btn_active")) {
+      cardLikeIconEl.src = "./images/liked-icon.svg";
+    } else {
+      cardLikeIconEl.src = "./images/like-icon.svg";
+    }
   });
 
   cardImageEl.addEventListener("click", () => {

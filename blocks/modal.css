@@ -52,7 +52,7 @@
   opacity: 1;
 }
 
-.modal__close-btn img {
+.modal__close-icon {
   object-fit: contain;
 }
 
@@ -151,7 +151,7 @@
   margin: 10px 0 0;
 }
 
-@media screen and (max-width: 627px) {
+@media screen and (max-width: 630px) {
   .modal__container {
     padding: 22px 12px 12px;
   }

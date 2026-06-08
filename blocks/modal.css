@@ -129,10 +129,10 @@
   width: auto;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
 }
 
-.modal__container_type_image .modal__close-btn {
+.modal__close-btn_type_preview {
   top: -40px;
   right: 0;
 }
@@ -142,6 +142,7 @@
   max-height: 80vh;
   object-fit: contain;
   display: block;
+  border-radius: 8px;
 }
 
 .modal__caption {
@@ -149,6 +150,7 @@
   font-size: 16px;
   font-weight: 400;
   margin: 10px 0 0;
+  background-color: #000;
 }
 
 @media screen and (max-width: 630px) {

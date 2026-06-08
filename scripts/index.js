@@ -76,7 +76,6 @@ function getCardElement(data) {
   const cardEl = cardElement.querySelector(".card");
   const cardDeleteBtnEl = cardElement.querySelector(".card__delete-btn");
   const cardLikeBtnEl = cardElement.querySelector(".card__like-btn");
-  const cardLikeIconEl = cardLikeBtnEl.querySelector(".card__like-icon");
 
   cardDeleteBtnEl.addEventListener("click", () => {
     cardEl.remove();
@@ -84,11 +83,6 @@ function getCardElement(data) {
 
   cardLikeBtnEl.addEventListener("click", () => {
     cardLikeBtnEl.classList.toggle("card__like-btn_active");
-    if (cardLikeBtnEl.classList.contains("card__like-btn_active")) {
-      cardLikeIconEl.src = "./images/liked-icon.svg";
-    } else {
-      cardLikeIconEl.src = "./images/like-icon.svg";
-    }
   });
 
   cardImageEl.addEventListener("click", () => {

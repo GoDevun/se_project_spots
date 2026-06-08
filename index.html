@@ -50,25 +50,17 @@
           <ul class="cards__list">
             <template id="card-template"
               ><li class="card">
+                <button class="card__delete-btn" type="button">
+                  <img
+                    class="card__delete-icon"
+                    src="./images/delete.svg"
+                    alt="Delete"
+                  />
+                </button>
                 <img class="card__image" src="#" alt="" />
                 <div class="card__caption">
                   <h2 class="card__title"></h2>
-                  <div class="card__buttons">
-                    <button class="card__delete-btn" type="button">
-                      <img
-                        class="card__delete-icon"
-                        src="./images/delete.svg"
-                        alt="Delete"
-                      />
-                    </button>
-                    <button class="card__like-btn" type="button">
-                      <img
-                        class="card__like-icon"
-                        src="./images/like-icon.svg"
-                        alt="Like"
-                      />
-                    </button>
-                  </div>
+                  <button class="card__like-btn" type="button"></button>
                 </div></li
             ></template>
           </ul>
@@ -110,7 +102,7 @@
       </div>
       <div class="modal" id="preview-modal">
         <div class="modal__container modal__container_type_image">
-          <button type="button" class="modal__close-btn">
+          <button type="button" class="modal__close-btn modal__close-btn_type_preview">
             <img src="./images/close-icon.svg" alt="Close" class="modal__close-icon" />
           </button>
           <img class="modal__image" src="#" alt="" />

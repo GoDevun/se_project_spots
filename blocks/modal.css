@@ -14,6 +14,7 @@
   transition:
     visibility 0s linear 0.3s,
     opacity 0.3s ease;
+  z-index: 2;
 }
 
 .modal_is-opened {
@@ -127,9 +128,6 @@
   padding: 0;
   max-width: 80vw;
   width: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .modal__close-btn_type_preview {
@@ -151,6 +149,9 @@
   font-weight: 400;
   margin: 10px 0 0;
   background-color: #000;
+  max-width: fit-content;
+  padding: 4px 8px;
+  border-radius: 8px;
 }
 
 @media screen and (max-width: 630px) {
@@ -164,11 +165,6 @@
 
   .modal__label {
     margin-bottom: 24px;
-  }
-
-  .modal__close-btn {
-    top: 16px;
-    right: 16px;
   }
 
   .modal__title {

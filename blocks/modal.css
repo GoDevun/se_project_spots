@@ -135,8 +135,12 @@
   right: 0;
 }
 
+.modal__close-btn_type_preview .modal__close-icon {
+  filter: invert(1);
+}
+
 .modal__image {
-  max-width: 80vw;
+  max-width: 90vw;
   max-height: 80vh;
   object-fit: contain;
   display: block;
@@ -159,6 +163,11 @@
     padding: 22px 12px 12px;
   }
 
+  .modal__close-btn {
+    top: 16px;
+    right: 16px;
+  }
+
   .modal__submit-btn {
     max-width: none;
   }
@@ -169,5 +178,14 @@
 
   .modal__title {
     font-size: 20px;
+  }
+
+  .modal__container_type_image {
+    max-width: 90vw;
+    width: 90vw;
+  }
+
+  .modal__close-btn_type_preview {
+    top: 0;
   }
 }

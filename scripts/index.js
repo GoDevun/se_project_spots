@@ -140,7 +140,7 @@ newPostFormEl.addEventListener("submit", function (evt) {
   };
   const card = getCardElement(newCard);
   cardsList.prepend(card);
-
+  newPostFormEl.reset();
   closeModal(newPostModal);
 });
 

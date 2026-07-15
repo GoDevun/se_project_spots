@@ -8,6 +8,14 @@ Spots is a responsive image-sharing web application where users can browse a gal
 
 - Profile section with avatar, name, bio, and action buttons
 - Photo card grid with like buttons
+- Data persistence via a REST API: profile info, avatar, cards, and likes are
+  loaded from and saved to the server, so changes survive a page reload
+- Add new cards and delete existing ones (with a confirmation popup)
+- Like and unlike cards, with the state saved on the server
+- Edit the profile name/description and change the avatar image
+- Form validation with the browser's `ValidityState` and a shared config object
+- Modals that close on the close button, overlay click, or the Escape key
+- Loading text ("Saving..." / "Deleting...") shown while requests are in flight
 - Card title text truncates to one line with an ellipsis when too long
 - Profile text truncates to three lines with an ellipsis when too long
 - Hover states on all interactive buttons
@@ -19,15 +27,32 @@ Spots is a responsive image-sharing web application where users can browse a gal
 - CSS3 — Flexbox, CSS Grid, transitions
 - BEM methodology with a flat file structure
 - Responsive design with media queries
-- CSS Grid for the card layout
 - Text overflow handling with `text-overflow: ellipsis` and `-webkit-line-clamp`
 - Custom Poppins font loaded via `@font-face`
 - Normalize.css for cross-browser consistency
+- ES modules with an `Api` class that encapsulates all `fetch` requests
+- Promise handling with `Promise.all`, `.then`/`.catch`/`.finally`
+- Webpack build pipeline (babel-loader, css-loader, mini-css-extract-plugin,
+  html-webpack-plugin, asset modules for images/fonts)
+
+## Getting Started
+
+```bash
+npm install      # install dependencies
+npm run dev      # start the webpack dev server
+npm run build    # build the production bundle into dist/
+npm run deploy   # publish dist/ to GitHub Pages
+```
+
+> Before running, open
+> https://around-api.en.tripleten-services.com/v1/users/create to get your
+> personal token and paste it into the `authorization` header in
+> [`src/index.js`](./src/index.js).
 
 ## Screenshots
 
-![Spots desktop view](./images/screenshot-desktop.png)
-![Spots mobile view](./images/screenshot-mobile.png)
+![Spots desktop view](./src/images/screenshot-desktop.png)
+![Spots mobile view](./src/images/screenshot-mobile.png)
 
 ## Deployed Project
 
@@ -35,4 +60,4 @@ Spots is a responsive image-sharing web application where users can browse a gal
 
 ## Project Pitch Video
 
-[Watch the project pitch video](https://www.loom.com/share/30ab278210114d91918352bc303e40f4)
+[Watch the project pitch video](https://www.loom.com/share/6bfb2317307e40e4bd69fc64f1a38279)

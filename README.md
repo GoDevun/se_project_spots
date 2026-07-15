@@ -60,4 +60,4 @@ npm run deploy   # publish dist/ to GitHub Pages
 
 ## Project Pitch Video
 
-[Watch the project pitch video](https://www.loom.com/share/30ab278210114d91918352bc303e40f4)
+[Watch the project pitch video](https://www.loom.com/share/6bfb2317307e40e4bd69fc64f1a38279)
